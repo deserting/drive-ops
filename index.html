@@ -7,64 +7,127 @@
   <link rel="stylesheet" href="css/global.css" />
 </head>
 <body>
+  <div class="background-veil"></div>
   <div class="app-wrapper">
-    
     <!-- TOP BAR -->
     <header class="top-bar">
-      <div class="top-bar-left">
-        <div class="brand">
-          <div class="brand-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="3" width="7" height="7" rx="1"/>
-              <rect x="14" y="3" width="7" height="7" rx="1"/>
-              <rect x="14" y="14" width="7" height="7" rx="1"/>
-              <rect x="3" y="14" width="7" height="7" rx="1"/>
-            </svg>
-          </div>
-          <div class="brand-text">
-            <h1>Outils Drive</h1>
-            <p class="brand-tagline">Visualisation & Gestion</p>
-          </div>
+      <div class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7" rx="1" />
+            <rect x="14" y="3" width="7" height="7" rx="1" />
+            <rect x="14" y="14" width="7" height="7" rx="1" />
+            <rect x="3" y="14" width="7" height="7" rx="1" />
+          </svg>
+        </div>
+        <div class="brand-text">
+          <p class="eyebrow">Suite opérationnelle</p>
+          <h1>Outils Drive</h1>
+          <p class="brand-tagline">Visualisation, analytics & pilotage</p>
         </div>
       </div>
-      <div class="top-bar-right">
-        <span class="env-badge">Production</span>
+      <div class="top-actions">
+        <div class="pill">
+          <span class="status-dot"></span>
+          Production
+        </div>
+        <button class="btn ghost-btn" type="button">
+          Journal des mises à jour
+          <svg viewBox="0 0 24 24" class="btn-icon" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
       </div>
     </header>
 
-    <!-- INTRO SECTION -->
-    <section class="intro-section">
-      <p class="intro-text">
-        Accéder rapidement aux outils de visualisation et de planification pour optimiser les opérations drive.
-      </p>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Navigation rapide</p>
+        <h2>Des vues claires pour piloter le terrain en temps réel.</h2>
+        <p class="lead">Chaque module est conçu pour la prise de décision rapide : focus sur la lisibilité, les raccourcis utiles et des données prêtes à être exploitées.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="heatmaps/">Ouvrir les outils</a>
+          <a class="btn ghost-btn" href="deliveries/">Voir les volumes livraisons</a>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-block">
+            <span class="meta-label">Disponibilité</span>
+            <span class="meta-value">99.9%</span>
+          </div>
+          <div class="meta-block">
+            <span class="meta-label">Modules actifs</span>
+            <span class="meta-value">2</span>
+          </div>
+          <div class="meta-block">
+            <span class="meta-label">Dernière mise à jour</span>
+            <span class="meta-value">05 Nov 2025</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Vue portfolio</p>
+            <h3>Qualité opérationnelle</h3>
+          </div>
+          <span class="chip chip-success">Stable</span>
+        </div>
+        <div class="panel-body">
+          <div class="kpi">
+            <p class="kpi-label">Temps d'accès</p>
+            <p class="kpi-value">&lt; 1.2s</p>
+            <p class="kpi-desc">Optimisé sur les parcours critiques</p>
+          </div>
+          <div class="kpi">
+            <p class="kpi-label">Clarté</p>
+            <p class="kpi-value">AA</p>
+            <p class="kpi-desc">Contraste conforme WCAG</p>
+          </div>
+          <div class="kpi">
+            <p class="kpi-label">Couverture données</p>
+            <p class="kpi-value">Échantillon</p>
+            <p class="kpi-desc">Sources en enrichissement continu</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- MODULES -->
     <main class="modules-container">
       <div class="section-header">
-        <h2 class="section-title">Modules disponibles</h2>
-        <p class="section-subtitle">Sélectionner un outil pour commencer</p>
+        <div>
+          <p class="eyebrow">Catalogue</p>
+          <h2 class="section-title">Modules disponibles</h2>
+          <p class="section-subtitle">Choisir un espace pour analyser ou ajuster les opérations</p>
+        </div>
+        <div class="filters">
+          <span class="chip">Prod</span>
+          <span class="chip chip-secondary">Interne</span>
+        </div>
       </div>
 
       <div class="modules-grid">
-        
+
         <!-- HEATMAP PICKING -->
         <article class="module-card module-highlight">
-          <div class="card-badge">
-            <span class="badge-dot"></span>
-            En production
-          </div>
-          <div class="card-icon card-icon-primary">  <!-- ← AJOUT classe card-icon-primary -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/>
-            </svg>
+          <div class="card-top">
+            <div class="card-badge">
+              <span class="badge-dot"></span>
+              En production
+            </div>
+            <div class="card-icon card-icon-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z" />
+              </svg>
+            </div>
           </div>
           <h3 class="card-title">Heatmaps picking</h3>
           <p class="card-description">
             Vue aérienne par zone, type de picking & période. Idéal slotting pour repérer les meubles sur-sollicités et rééquilibrer les implantations.
           </p>
           <ul class="card-features">
-            <li>Filtre par zone, type mono/multi (LAD à venir), dates</li>
+            <li>Filtres zone, mono/multi (LAD à venir), dates</li>
             <li>Intensité relative et stats par meuble</li>
             <li>Données : Mezzanine (mono/multi), autres zones à venir</li>
             <li>Données : à partir du 01/11/2025 jusqu'au 05/11/2025 (échantillon en cours de remplissage)</li>
@@ -72,7 +135,7 @@
           <div class="card-actions">
             <a href="heatmaps/" class="btn btn-primary">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
+                <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
               Ouvrir la heatmap
             </a>
@@ -81,16 +144,18 @@
 
         <!-- DELIVERY ANALYTICS -->
         <article class="module-card module-highlight">
-          <div class="card-badge">
-            <span class="badge-dot"></span>
-            En production
-          </div>
-          <div class="card-icon card-icon-primary">  <!-- ← AJOUT classe card-icon-primary -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="12" y1="20" x2="12" y2="10"/>
-              <line x1="18" y1="20" x2="18" y2="4"/>
-              <line x1="6" y1="20" x2="6" y2="16"/>
-            </svg>
+          <div class="card-top">
+            <div class="card-badge">
+              <span class="badge-dot"></span>
+              En production
+            </div>
+            <div class="card-icon card-icon-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="20" x2="12" y2="10" />
+                <line x1="18" y1="20" x2="18" y2="4" />
+                <line x1="6" y1="20" x2="6" y2="16" />
+              </svg>
+            </div>
           </div>
           <h3 class="card-title">Analytics Livraisons</h3>
           <p class="card-description">
@@ -105,7 +170,7 @@
           <div class="card-actions">
             <a href="deliveries/" class="btn btn-primary">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
+                <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
               Ouvrir l'analytics
             </a>
@@ -114,15 +179,17 @@
 
         <!-- PLAN DESIGNER -->
         <article class="module-card">
-          <div class="card-badge card-badge-secondary">
-            <span class="badge-dot badge-dot-secondary"></span>
-            Interne
-          </div>
-          <div class="card-icon card-icon-secondary">  <!-- ← AJOUT classe card-icon-secondary -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="3" width="18" height="18" rx="2"/>
-              <path d="M3 9h18M9 21V9"/>
-            </svg>
+          <div class="card-top">
+            <div class="card-badge card-badge-secondary">
+              <span class="badge-dot badge-dot-secondary"></span>
+              Interne
+            </div>
+            <div class="card-icon card-icon-secondary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M3 9h18M9 21V9" />
+              </svg>
+            </div>
           </div>
           <h3 class="card-title">Plan Designer</h3>
           <p class="card-description">
@@ -135,54 +202,28 @@
             <li>Import/export des plans existants</li>
           </ul>
           <div class="card-actions">
-            <a href="plan_designer.html" class="btn btn-secondary">
+            <a href="plan_designer.html" class="btn ghost-btn">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 5v14M5 12h14"/>
+                <path d="M12 5v14M5 12h14" />
               </svg>
               Accéder au designer
             </a>
           </div>
         </article>
-
-        <!-- MULTI-PICKING 
-        <article class="module-card module-disabled">
-          <div class="card-badge card-badge-warning">
-            <span class="badge-dot badge-dot-warning"></span>
-            Bientôt disponible
-          </div>
-          <div class="card-icon card-icon-disabled">  
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 11l3 3L22 4"/>
-              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-            </svg>
-          </div>
-          <h3 class="card-title">Heatmap multi-picking</h3>
-          <p class="card-description">
-            Analyse comparative des modes de picking avec filtres avancés et exports personnalisables.
-          </p>
-          <ul class="card-features">
-            <li>Comparaison mono vs multi vs LAD</li>
-            <li>Métriques de performance par zone</li>
-            <li>Export CSV et rapports PDF</li>
-          </ul>
-          <div class="card-actions">
-            <button class="btn btn-secondary" disabled>
-              En développement
-            </button>
-          </div>
-        </article> -->
-
-        
       </div>
     </main>
 
     <!-- FOOTER -->
     <footer class="site-footer">
-      <span>© 2025 Outils drive</span>
-      <span class="footer-sep">•</span>
-      <span>Version 1.3.0</span>
+      <div class="footer-left">
+        <span>© 2025 Outils drive</span>
+        <span class="footer-sep">•</span>
+        <span>Version 1.3.0</span>
+      </div>
+      <div class="footer-right">
+        <span class="chip chip-ghost">Design refonte 2025</span>
+      </div>
     </footer>
-
   </div>
 </body>
 </html>
