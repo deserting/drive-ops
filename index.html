@@ -3,227 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Outils Drive – Visualisation & Gestion</title>
+  <title>Outils Drive – Hub Central</title>
+  
+  <!-- FONT: INTER + JETBRAINS MONO -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="css/global.css" />
 </head>
 <body>
-  <div class="background-veil"></div>
-  <div class="app-wrapper">
-    <!-- TOP BAR -->
-    <header class="top-bar">
-      <div class="brand">
-        <div class="brand-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="3" width="7" height="7" rx="1" />
-            <rect x="14" y="3" width="7" height="7" rx="1" />
-            <rect x="14" y="14" width="7" height="7" rx="1" />
-            <rect x="3" y="14" width="7" height="7" rx="1" />
-          </svg>
-        </div>
-        <div class="brand-text">
-          <p class="eyebrow">Suite opérationnelle</p>
-          <h1>Outils Drive</h1>
-          <p class="brand-tagline">Visualisation, analytics & pilotage</p>
-        </div>
+  
+  <div class="app-view">
+    
+    <!-- HEADER -->
+    <header class="header-minimal">
+      <div class="brand-group">
+        <span class="brand-sup">Département Logistique</span>
+        <h1 class="brand-main">Outils de Pilotage</h1>
       </div>
-      <div class="top-actions">
-        <div class="pill">
-          <span class="status-dot"></span>
-          Production
-        </div>
-        <button class="btn ghost-btn" type="button">
-          Journal des mises à jour
-          <svg viewBox="0 0 24 24" class="btn-icon" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-        </button>
+      <div class="header-status">
+        <span class="status-light"></span>
+        <span>Système v1.3.0</span>
       </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">Navigation rapide</p>
-        <h2>Des vues claires pour piloter le terrain en temps réel.</h2>
-        <p class="lead">Chaque module est conçu pour la prise de décision rapide : focus sur la lisibilité, les raccourcis utiles et des données prêtes à être exploitées.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="heatmaps/">Ouvrir les outils</a>
-          <a class="btn ghost-btn" href="deliveries/">Voir les volumes livraisons</a>
-        </div>
-        <div class="hero-meta">
-          <div class="meta-block">
-            <span class="meta-label">Disponibilité</span>
-            <span class="meta-value">99.9%</span>
-          </div>
-          <div class="meta-block">
-            <span class="meta-label">Modules actifs</span>
-            <span class="meta-value">2</span>
-          </div>
-          <div class="meta-block">
-            <span class="meta-label">Dernière mise à jour</span>
-            <span class="meta-value">05 Nov 2025</span>
-          </div>
-        </div>
-      </div>
-      <div class="hero-panel">
-        <div class="panel-header">
-          <div>
-            <p class="eyebrow">Vue portfolio</p>
-            <h3>Qualité opérationnelle</h3>
-          </div>
-          <span class="chip chip-success">Stable</span>
-        </div>
-        <div class="panel-body">
-          <div class="kpi">
-            <p class="kpi-label">Temps d'accès</p>
-            <p class="kpi-value">&lt; 1.2s</p>
-            <p class="kpi-desc">Optimisé sur les parcours critiques</p>
-          </div>
-          <div class="kpi">
-            <p class="kpi-label">Clarté</p>
-            <p class="kpi-value">AA</p>
-            <p class="kpi-desc">Contraste conforme WCAG</p>
-          </div>
-          <div class="kpi">
-            <p class="kpi-label">Couverture données</p>
-            <p class="kpi-value">Échantillon</p>
-            <p class="kpi-desc">Sources en enrichissement continu</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- MODULES -->
-    <main class="modules-container">
-      <div class="section-header">
-        <div>
-          <p class="eyebrow">Catalogue</p>
-          <h2 class="section-title">Modules disponibles</h2>
-          <p class="section-subtitle">Choisir un espace pour analyser ou ajuster les opérations</p>
+    <main class="modules-grid">
+      
+      <!-- MODULE 1: HEATMAPS (Cyan - Observation) -->
+      <a href="heatmaps/" class="module-card theme-cyan">
+        <div class="card-header">
+          <div class="module-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/>
+            </svg>
+          </div>
+          <span class="module-code">01</span>
         </div>
-        <div class="filters">
-          <span class="chip">Prod</span>
-          <span class="chip chip-secondary">Interne</span>
+        
+        <div class="card-content">
+          <h2 class="module-title">Heatmaps Picking</h2>
+          <p class="module-desc">
+            Vue aérienne par zone, type de picking & période. Idéal pour le slotting et repérer les points de congestion.
+          </p>
         </div>
-      </div>
 
-      <div class="modules-grid">
-
-        <!-- HEATMAP PICKING -->
-        <article class="module-card module-highlight">
-          <div class="card-top">
-            <div class="card-badge">
-              <span class="badge-dot"></span>
-              En production
-            </div>
-            <div class="card-icon card-icon-primary">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z" />
-              </svg>
-            </div>
+        <div class="card-meta">
+          <div class="meta-block">
+            <span class="meta-label">Zone</span>
+            <span class="meta-value">Mezzanine</span>
           </div>
-          <h3 class="card-title">Heatmaps picking</h3>
-          <p class="card-description">
-            Vue aérienne par zone, type de picking & période. Idéal slotting pour repérer les meubles sur-sollicités et rééquilibrer les implantations.
+          <div class="meta-block">
+            <span class="meta-label">Mode</span>
+            <span class="meta-value">Mono / Multi</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- MODULE 2: DELIVERIES (Indigo - Flux) -->
+      <a href="deliveries/" class="module-card theme-indigo">
+        <div class="card-header">
+          <div class="module-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="20" x2="12" y2="10"/>
+              <line x1="18" y1="20" x2="18" y2="4"/>
+              <line x1="6" y1="20" x2="6" y2="16"/>
+            </svg>
+          </div>
+          <span class="module-code">02</span>
+        </div>
+        
+        <div class="card-content">
+          <h2 class="module-title">Analytics Livraisons</h2>
+          <p class="module-desc">
+            Analyse des flux entrants par tranche de 30 minutes. Comparaison de journées et profils de charge moyens.
           </p>
-          <ul class="card-features">
-            <li>Filtres zone, mono/multi (LAD à venir), dates</li>
-            <li>Intensité relative et stats par meuble</li>
-            <li>Données : Mezzanine (mono/multi), autres zones à venir</li>
-            <li>Données : à partir du 01/11/2025 jusqu'au 05/11/2025 (échantillon en cours de remplissage)</li>
-          </ul>
-          <div class="card-actions">
-            <a href="heatmaps/" class="btn btn-primary">
-              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-              Ouvrir la heatmap
-            </a>
-          </div>
-        </article>
+        </div>
 
-        <!-- DELIVERY ANALYTICS -->
-        <article class="module-card module-highlight">
-          <div class="card-top">
-            <div class="card-badge">
-              <span class="badge-dot"></span>
-              En production
-            </div>
-            <div class="card-icon card-icon-primary">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="20" x2="12" y2="10" />
-                <line x1="18" y1="20" x2="18" y2="4" />
-                <line x1="6" y1="20" x2="6" y2="16" />
-              </svg>
-            </div>
+        <div class="card-meta">
+          <div class="meta-block">
+            <span class="meta-label">Analyse</span>
+            <span class="meta-value">Temporelle</span>
           </div>
-          <h3 class="card-title">Analytics Livraisons</h3>
-          <p class="card-description">
-            Nombre de livraisons par tranche de 30 minutes, avec comparaison de journées et profils moyens par jour de semaine.
-          </p>
-          <ul class="card-features">
-            <li>Médiane temporelle et pics de charge</li>
-            <li>Modes single, compare et weekday</li>
-            <li>Métriques Total, Drive (Collab à venir dès que Manhattan aura bien voulu coopérer)</li>
-            <li>Données : à partir du 01/11/2025 (échantillon en cours de remplissage)</li>
-          </ul>
-          <div class="card-actions">
-            <a href="deliveries/" class="btn btn-primary">
-              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-              Ouvrir l'analytics
-            </a>
+          <div class="meta-block">
+            <span class="meta-label">Données</span>
+            <span class="meta-value">Temps Réel</span>
           </div>
-        </article>
+        </div>
+      </a>
 
-        <!-- PLAN DESIGNER -->
-        <article class="module-card">
-          <div class="card-top">
-            <div class="card-badge card-badge-secondary">
-              <span class="badge-dot badge-dot-secondary"></span>
-              Interne
-            </div>
-            <div class="card-icon card-icon-secondary">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="2" />
-                <path d="M3 9h18M9 21V9" />
-              </svg>
-            </div>
+      <!-- MODULE 3: PLAN DESIGNER (Ambre - Construction) -->
+      <a href="plan_designer.html" class="module-card theme-amber">
+        <div class="card-header">
+          <div class="module-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M3 9h18M9 21V9"/>
+            </svg>
           </div>
-          <h3 class="card-title">Plan Designer</h3>
-          <p class="card-description">
-            Éditeur interactif pour créer et ajuster les layouts de zones. Mode rayon guidé pour placement rapide.
+          <span class="module-code">03</span>
+        </div>
+        
+        <div class="card-content">
+          <h2 class="module-title">Plan Designer</h2>
+          <p class="module-desc">
+            Éditeur interactif pour la conception des layouts de zone. Mode rayon guidé pour placement rapide.
           </p>
-          <ul class="card-features">
-            <li>Placement visuel des meubles sur grille</li>
-            <li>Génération automatique du JSON</li>
-            <li>Mode incrémentation automatique</li>
-            <li>Import/export des plans existants</li>
-          </ul>
-          <div class="card-actions">
-            <a href="plan_designer.html" class="btn ghost-btn">
-              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 5v14M5 12h14" />
-              </svg>
-              Accéder au designer
-            </a>
+        </div>
+
+        <div class="card-meta">
+          <div class="meta-block">
+            <span class="meta-label">Outil</span>
+            <span class="meta-value">Éditeur</span>
           </div>
-        </article>
-      </div>
+          <div class="meta-block">
+            <span class="meta-label">Accès</span>
+            <span class="meta-value">Interne</span>
+          </div>
+        </div>
+      </a>
+
     </main>
 
     <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="footer-left">
-        <span>© 2025 Outils drive</span>
-        <span class="footer-sep">•</span>
-        <span>Version 1.3.0</span>
-      </div>
-      <div class="footer-right">
-        <span class="chip chip-ghost">Design refonte 2025</span>
-      </div>
+    <footer class="footer-minimal">
+      <span>© 2025 Outils Drive</span>
+      <span>Documentation & Support</span>
     </footer>
+
   </div>
 </body>
 </html>
